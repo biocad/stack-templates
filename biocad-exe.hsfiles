@@ -27,7 +27,7 @@ version:             0.1.0.0
 github:              "biocad/{{name}}"
 license:             BSD3
 author:              "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
-maintainer:          "{{author-email}}{{^author-email}}example@example.com{{/author-email}}"
+maintainer:          "{{author-email}}{{^author-email}}example@biocad.ru{{/author-email}}"
 copyright:           "(c) {{year}}{{^year}}2019{{/year}}, BIOCAD CBD"
 
 extra-source-files:
@@ -40,7 +40,7 @@ category:            {{category}}{{^category}}Bio{{/category}}
 description:         Please see the README on GitHub at <https://github.com/biocad/{{name}}#readme>
 
 dependencies:
-  - base >= 4.7 && < 5
+  - base >= 4.8 && < 5
 
 ghc-options:
   - -Wall
@@ -64,8 +64,8 @@ executables:
 import Distribution.Simple
 main = defaultMain
 
-{-# START_FILE src/Lib.hs #-}
-module Lib
+{-# START_FILE src/Bio/Lib.hs #-}
+module Bio.Lib
     ( someFunc
     ) where
 
@@ -75,7 +75,7 @@ someFunc = putStrLn "someFunc"
 {-# START_FILE app/Main.hs #-}
 module Main where
 
-import Lib
+import Bio.Lib
 
 main :: IO ()
 main = someFunc
