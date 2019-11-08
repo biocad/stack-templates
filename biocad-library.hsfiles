@@ -48,7 +48,7 @@ tests:
     ghc-options:
       - -threaded
       - -rtsopts
-      - "\"-with-rtsopts=-A64m -qb0 -I0 -N10 -qn5\""
+      - "\"-with-rtsopts=-A64m -AL640m -I0 -N10\""
     dependencies:
       - {{name}}
       - hspec
