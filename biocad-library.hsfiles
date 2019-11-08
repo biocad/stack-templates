@@ -1,26 +1,18 @@
 {-# START_FILE stack.yaml #-}
-# before building, don`t forget to delete the cache file ~/.stack/custom-plan/yaml/
-
 resolver: https://lts.math.bio/bcd-lts-dev.yaml
 
-package-indices:
-- name: LTS-index
-  download-prefix: https://hackage.math.bio/hackage.fpcomplete.com/package/
-  http: https://hackage.math.bio/hackage.fpcomplete.com/01-index.tar.gz
-- name: Hackage Biocad
-  download-prefix: http://hackage.biocad.ru/package/
-  http: http://hackage.biocad.ru/00-index.tar.gz
-
+# package and necessary repos that are not included in the BCD-LTS
 packages:
-  - '.'
+- '.'
 
+# necessary extra-deps that are not included in the BCD-LTS
 extra-deps: []
 
-ignore-revision-mismatch: true
+flags: {}
 
 ghc-options:
   $locals: -Wall -fdiagnostics-color=always
-
+  $everything: -XNoMonadFailDesugaring
 {-# START_FILE package.yaml #-}
 name:                {{name}}
 version:             0.1.0.0
@@ -130,5 +122,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 {-# START_FILE .gitignore #-}
 .stack-work/
+stack.yaml.lock
 {{name}}.cabal
 *~
