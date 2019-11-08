@@ -6,7 +6,8 @@ This repository contains custom [stack](http://haskellstack.org) templates for B
 Usage:
 
 ```console
-$ stack new bio-something biocad/biocad
+$ stack new bio-something biocad/biocad-library # for libraries
+$ stack new bio-something biocad/biocad-exe # for executables
 ```
 
 This will create a sample project with `stack.yaml` pointing to our custom resolver and with
