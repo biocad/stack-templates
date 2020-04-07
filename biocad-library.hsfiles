@@ -12,7 +12,6 @@ flags: {}
 
 ghc-options:
   $locals: -Wall -fdiagnostics-color=always
-  $everything: -XNoMonadFailDesugaring
 {-# START_FILE package.yaml #-}
 name:                {{name}}
 version:             0.1.0.0
